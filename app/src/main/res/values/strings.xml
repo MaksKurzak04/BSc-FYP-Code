@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DrowsinessDetection</string>
+    <string name="title_sessions">Sessions</string>
+    <string name="no_sessions">No sessions found</string>
+    <string name="cd_home">Home</string>
+    <string name="cd_list">List</string>
+    <string name="cd_stats">Stats</string>
+    <string name="scan_connect">Scan &amp; Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="start_session">Start Session</string>
+    <string name="finish_session">Finish Session</string>
+    <string name="ddm_title">DDM</string>
+    <string name="ddm_label">DDM</string>
+    <string name="drowsiness_score">Drowsiness Score</string>
+    <string name="num_default">0</string>
+    <string name="start_drive">Start Drive</string>
+    <string name="ddm_connection">DDM Connection</string>
+    <string name="connection_status_desc">Connection status</string>
+
+    <!-- Taskbar content descriptions / labels -->
+    <string name="home">Home</string>
+    <string name="list">List</string>
+    <string name="stats">Stats</string>
+
+    <!-- New metrics for MainActivity -->
+    <string name="total_hours_year">Total Hours (Year)</string>
+    <string name="hours_this_week">Hours (This Week)</string>
+    <string name="alerts_year">Alerts (Year)</string>
+    <string name="hours_default">0h</string>
+
+    <!-- Keep other existing strings after these -->
+</resources>

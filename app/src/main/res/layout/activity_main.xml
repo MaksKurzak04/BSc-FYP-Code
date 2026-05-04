@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/statusCircle"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="@drawable/circle_light_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <View
+        android:id="@+id/whiteCircle"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/circle_white"
+        app:layout_constraintTop_toTopOf="@id/statusCircle"
+        app:layout_constraintBottom_toBottomOf="@id/statusCircle"
+        app:layout_constraintStart_toStartOf="@id/statusCircle"
+        app:layout_constraintEnd_toEndOf="@id/statusCircle" />
+
+    <TextView
+        android:id="@+id/DDM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ddm_label"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drowsiness_score"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="@id/whiteCircle"
+        app:layout_constraintBottom_toBottomOf="@id/whiteCircle"
+        app:layout_constraintStart_toStartOf="@id/whiteCircle"
+        app:layout_constraintEnd_toEndOf="@id/whiteCircle"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/numScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/num_default"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="@id/whiteCircle"
+        app:layout_constraintBottom_toBottomOf="@id/whiteCircle"
+        app:layout_constraintStart_toStartOf="@id/whiteCircle"
+        app:layout_constraintEnd_toEndOf="@id/whiteCircle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:id="@+id/greyOutlineBox"
+        android:layout_width="275dp"
+        android:layout_height="200dp"
+        android:background="@drawable/square_grey"
+        app:layout_constraintTop_toBottomOf="@id/statusCircle"
+        app:layout_constraintBottom_toTopOf="@id/statusConnection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/whiteInnerBox"
+        android:layout_width="265dp"
+        android:layout_height="190dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="@id/greyOutlineBox"
+        app:layout_constraintBottom_toBottomOf="@id/greyOutlineBox"
+        app:layout_constraintStart_toStartOf="@id/greyOutlineBox"
+        app:layout_constraintEnd_toEndOf="@id/greyOutlineBox">
+
+        <TextView
+            android:id="@+id/totalHoursYearLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/total_hours_year"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/totalHoursYearValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours_default"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/totalHoursYearLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/hoursWeekLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hours_this_week"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/totalHoursYearValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/hoursWeekValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours_default"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/hoursWeekLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/alertsYearLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/alerts_year"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/hoursWeekValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/alertsYearValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/num_default"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/alertsYearLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statusConnection"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:background="@drawable/taskbar_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="500dp">
+
+        <TextView
+            android:id="@+id/connectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ddm_connection"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/connectionIcon"
+            android:layout_marginStart="16dp" />
+
+        <ImageView
+            android:id="@+id/connectionIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/no_signal_icon"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/connection_status_desc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/connectionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/startDriveBtn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/taskbar_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="575dp" />
+
+    <TextView
+        android:id="@+id/startDriveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_drive"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/startDriveBtn"
+        app:layout_constraintBottom_toBottomOf="@id/startDriveBtn"
+        app:layout_constraintStart_toStartOf="@id/startDriveBtn"
+        app:layout_constraintEnd_toEndOf="@id/startDriveBtn"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+
+    <LinearLayout
+        android:id="@+id/taskBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@drawable/taskbar_green"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/homepage_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/home" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/list_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/list" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/stats_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/stats" />
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/info_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/stats" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

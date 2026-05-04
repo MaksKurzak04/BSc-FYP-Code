@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/infoContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/taskBar">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info / Session Tools"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/generateSampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Sample Sessions" />
+
+        <Button
+            android:id="@+id/clearSessionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear All Sessions" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Taskbar (shared navigation) -->
+    <LinearLayout
+        android:id="@+id/taskBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@drawable/taskbar_green"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/homepage_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_home" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/list_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_list" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/stats_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_stats" />
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/info_icon"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_stats" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
